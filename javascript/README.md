@@ -1,5 +1,33 @@
 # JavaScript Style Guide
 
+## Whitespace
+
+  * Use tabs, not spaces.
+
+    ```js
+    function bad () {
+    ∙∙∙∙return 'four spaces';
+    }
+
+    function good () {
+    ————return 'single tab';
+    }
+    ```
+
+    **Note**: Enable invisible characters in your text editor or IDE to avoid introducing mixed indentation.
+
+  * Avoid introducing whitespace at the end of a line.
+
+    ```js
+    // Bad
+    const problem = 'extra spaces';∙∙∙∙↵
+
+    // Good
+    const noProblem = 'spaces gone';↵
+    ```
+
+    **Note**: Enabling invisible characters will help here, too. Your text editor or IDE may also be able to remove whitespace at the end of lines automatically.
+
 ## Strings
 
   * Use `String()` to coerce values into strings.
