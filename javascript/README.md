@@ -6,7 +6,7 @@
 
     ```js
     function bad () {
-    ∙∙∙∙return 'four spaces';
+    ····return 'four spaces';
     }
 
     function good () {
@@ -20,7 +20,7 @@
 
     ```js
     // Bad
-    const problem = 'extra spaces';∙∙∙∙↵
+    const problem = 'extra spaces';····↵
 
     // Good
     const noProblem = 'spaces gone';↵
