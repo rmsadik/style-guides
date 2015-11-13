@@ -558,13 +558,23 @@
   * Give functions descriptive, [imperative](https://en.wikipedia.org/wiki/Imperative_mood) names.
 
     ```js
-    // Bad
+    // Bad, name not descriptive
     function fn () {
         return Math.random() < 0.5;
     }
 
-    // Good
+    // Bad, functionality unclear
+    function value () {
+        // ...
+    }
+
+    // Good, name descriptive
     function getRandomBoolean () {
         return Math.random() < 0.5;
+    }
+
+    // Good, functionality clear
+    function getValue () {
+        // ...
     }
     ```
