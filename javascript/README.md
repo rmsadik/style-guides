@@ -124,6 +124,30 @@
     const prefer = String(maybeString);
     ```
 
+  * Avoid using `#toString()` if possible.
+
+    ```js
+    const input = null;
+
+    // Bad
+    input.toString() // TypeError: Cannot read property 'toString' of null
+
+    // Good
+    String(input); // => null
+    ```
+
+    **Note**: `String()` invokes `#toString()` if it is available.
+
+    ```js
+    class Example {
+        toString () {
+            return 'Hello world';
+        }
+    }
+
+    String(new Example()); // => 'Hello world'
+    ```
+
   * Do not use the `new` keyword when initializing a string.
 
     ```js
