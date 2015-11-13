@@ -28,6 +28,88 @@
 
     **Note**: Enabling invisible characters will help here, too. Your text editor or IDE may also be able to remove whitespace at the end of lines automatically.
 
+  * Use spaces between operators.
+
+    ```js
+    // Bad
+    const squashed=Math.PI*r*r;
+
+    // Good
+    const roomy = Math.PI * r * r;
+    ```
+
+  * Unary and pre/post-fix operators do not need to be spaced.
+
+    ```js
+    // Bad
+    console.log(- x);
+    console.log(y ++);
+    console.log(-- z);
+
+    // Good
+    console.log(-x);
+    console.log(y++);
+    console.log(--z);
+    ```
+
+  * Do not add spaces inside parentheses.
+
+    ```js
+    // Bad
+    console.log( 'Hello world' );
+
+    // Good
+    console.log('Hello world');
+    ```
+
+  * Do not add spaces inside square brackets.
+
+    ```js
+    // Bad
+    [ 'Foo' ];
+
+    // Good
+    ['Bar'];
+    ```
+
+  * Add spaces inside braces and after colons.
+
+    ```js
+    // Bad
+    {foo:'bar'};
+
+    // Good
+    { foo: 'bar' }
+    ```
+
+  * Add spaces after commas.
+
+    ```js
+    // Bad
+    fn([1,2,3],'a','b','c');
+
+    // Good
+    fn([1, 2, 3], 'a', 'b', 'c');
+    ```
+
+  * Use spaces around keywords, argument lists and conditions.
+
+    ```js
+    // Bad
+    function squashed(x){
+        if(x){
+            return typeof(x);
+        }
+    }
+
+    // Good
+    function roomy (x) {
+        if (x) {
+            return typeof x;
+        }
+    }
+    ```
+
 ## Strings
 
   * Use `String()` to coerce values into strings.
