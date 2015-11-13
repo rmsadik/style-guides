@@ -38,7 +38,7 @@
     const roomy = Math.PI * r * r;
     ```
 
-  * Unary and pre/post-fix operators do not need to be spaced.
+  * Prefix, postfix and unary operators do not need to be spaced.
 
     ```js
     // Bad
