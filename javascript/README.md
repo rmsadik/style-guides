@@ -609,3 +609,37 @@
     ```
 
     Notable exceptions are abstract and virtual methods. These may be intentionally stubbed if anticipating child classes to implement those methods.
+
+## Arrow functions
+
+  * Prefer arrow functions over function declarations where possible. Arrow functions are cleaner and do not introduce their own scope.
+
+    ```js
+    const input = [1, 2, 3];
+    let squared;
+
+    // Bad
+    squared = input.map(function (num) {
+        return num * num;
+    });
+
+    // Better
+    squared = input.map((num) => {
+        return num * num;
+    });
+
+    // Best
+    squared = input.map((num) => num * num);
+    ```
+
+  * Use parentheses around arguments list even when there is a single argument.
+
+    ```js
+    const input = [1, 2, 3];
+
+    // Bad
+    input.forEach(x => console.log(x));
+
+    // Good
+    input.forEach((x) => console.log(x));
+    ```
