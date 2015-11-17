@@ -578,3 +578,34 @@
         // ...
     }
     ```
+
+  * Avoid declaring methods which do not depend on `this`. A method is a function declared as a member of an object. If a method does not use `this`, it can probably be defined as a function instead.
+
+    ```js
+    class Example {
+        constructor () {
+            this.foo = 'foo';
+        }
+
+        // Unnecessary, does not reference `this`
+        logBaz () {
+            console.log('baz');
+        }
+
+        // Good, references `this`
+        logFoo () {
+            console.log(this.foo);
+        }
+
+        // Good, declared as function
+        static logBar () {
+            console.log('bar');
+        }
+    }
+
+    const ex = new Example();
+    ex.logFoo(); // => 'foo'
+    Example.logBar(); // => 'bar'
+    ```
+
+    Notable exceptions are abstract and virtual methods. These may be intentionally stubbed if anticipating child classes to implement those methods.
