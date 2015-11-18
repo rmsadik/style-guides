@@ -139,6 +139,29 @@
     let remaining = iterations - current;
     ```
 
+  * Avoid saving references to `this`. These can almost always be replaced with an arrow function.
+
+    ```js
+    // Bad
+    function foo () {
+        const self = this;
+        return new Promise(function (resolve) {
+            setTimeout(function () {
+                resolve(self.foo);
+            }, 1000);
+        });
+    }
+
+    // Good
+    function bar () {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(this.bar);
+            }, 1000);
+        });
+    }
+    ```
+
 ## Naming
 
   * Give variables clear names.
