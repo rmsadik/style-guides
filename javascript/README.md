@@ -227,6 +227,19 @@
     }
     ```
 
+  * Keep variable names professional.
+
+    ```js
+    // Bad
+    const potato = 3;
+    const ohhai = 'lol';
+    const pants = ohhai.repeat(potato);
+
+    // Good
+    const iterations = 3;
+    const string = 'hello';
+    const result = string.repeat(iterations);
+    ```
 
 ## Comments
 
