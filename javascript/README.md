@@ -267,6 +267,43 @@
     const isIE = detectIE();
     ```
 
+  * Use doc blocks. They should allow the reader to understand the purpose and behavior of a chunk of code (like a function, class, property etc.) before they have actually read the code. Doc blocks are multiline comments beginning with `/**` (two asterisks).
+
+    ```js
+    // Bad
+    function easeInOutQuad (t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) {
+            return c / 2 * t * t + b;
+        }
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    // Good
+    /**
+     * Quadratic in/out easing algorithm.
+     * @param {Number} t Current time (value between 0 and d)
+     * @param {Number} b Start value at t=0
+     * @param {Number} c Change in value at t=d
+     * @param {Number} d Duration
+     * @return {Number} Value at current time
+     */
+    function easeInOutQuad (t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) {
+            return c / 2 * t * t + b;
+        }
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+    ```
+
+    **Note**: If you use documentation generators, make sure you are familiar with the syntax they expect:
+    * [JSDoc](http://usejsdoc.org/)
+    * [YUIDoc](http://yui.github.io/yuidoc/syntax/)
+    * [ESDoc](https://esdoc.org/tags.html)
+
 ## Types
 
   * Use `typeof` to check the type of primitives.
