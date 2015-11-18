@@ -267,6 +267,38 @@
     const isIE = detectIE();
     ```
 
+## Types
+
+  * Use `typeof` to check the type of primitives.
+
+    ```js
+    const value = 'hello world';
+
+    // Bad
+    value instanceof String; // => false
+
+    // Good
+    typeof value === 'string'; // => true
+    ```
+
+  * Use `instanceof` to check the type of objects.
+
+    ```js
+    class Base {}
+    class Foo extends Base {}
+    class Bar extends Base {}
+    const foo = new Foo();
+    const bar = new Bar();
+
+    // Bad, does not check superclasses
+    foo.constructor === Foo; // => true
+    foo.constructor === Base; // => false
+
+    // Good, checks superclasses
+    foo instanceof Foo; // => true
+    foo instanceof Base; // => true
+    ```
+
 ## Strings
 
   * Use `String()` to coerce values into strings.
