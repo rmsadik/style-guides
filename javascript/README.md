@@ -165,6 +165,33 @@
     }
     ```
 
+  * Use camelCase for variable names.
+
+    ```js
+    // Bad
+    const Namespace = {};
+    const price_aud = 1.61;
+    const inputvalue = 'foobar';
+
+    // Good
+    const namespace = {};
+    const priceAUD = 1.61;
+    const inputValue = 'foobar';
+    ```
+
+  * Use PascalCase for constructors and class names.
+
+    ```js
+    // Bad
+    function controller () {}
+    class applicationView extends view {}
+
+    // Good
+    function Controller () {}
+    class ApplicationView extends View {}
+    ```
+
+
 ## Comments
 
   * Try and use sentence case in comments.
