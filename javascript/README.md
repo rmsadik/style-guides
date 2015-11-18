@@ -643,3 +643,57 @@
     // Good
     input.forEach((x) => console.log(x));
     ```
+
+## Method chaining
+
+  * Split method chains with newlines. This makes functionality clearer, diffs simpler, and [blames](https://git-scm.com/docs/git-blame) easier.
+
+    ```js
+    // Bad
+    $('.foo').filter('ul').find('li').text((i) => `Item ${i + 1}`);
+
+    // Good
+    $('.foo')
+        .filter('ul')
+        .find('li')
+        .text((i) => `Item ${i + 1}`);
+    ```
+
+  * Use a leading dot when chaining. Indent chained methods.
+
+    ```js
+    // Bad
+    Promise.resolve().then(() => {
+        const data = getUserInput();
+        return asyncFunction1(data);
+    }).then(() => asyncFunction2())
+    .catch((err) => displayError(err));
+
+    // Good
+    Promise.resolve()
+        .then(() => {
+            const data = getUserInput();
+            return asyncFunction1(data);
+        })
+        .then(() => asyncFunction2())
+        .catch((err) => displayError(err));
+    ```
+
+  * Limit chain length where possible. It may be clearer to assign intermediary results to a variable.
+
+    ```js
+    // Bad
+    $('#items')
+        .find('.selected')
+            .highlight()
+            .end()
+        .find('.open')
+            .updateCount();
+
+    // Good
+    const $items = $('#items');
+    const $selected = $items.find('.selected');
+    const $open = $items.find('.open');
+    $selected.highlight();
+    $open.updateCount();
+    ```
