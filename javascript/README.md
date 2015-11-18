@@ -110,6 +110,32 @@
     }
     ```
 
+## Comments
+
+  * Try and use sentence case in comments.
+
+    ```js
+    // bad: it can be difficult to tell if two line comments are a
+    // continuation or distinct comments when they are all lower case
+    const foo = 'foo';
+
+    // Good: Using uppercase at the beginning of the line comment (and,
+    // where necessary, punctuation at the end) makes comments clear
+    const bar = 'bar';
+    ```
+
+  * Keep comments professional.
+
+    ```js
+    // Bad
+    // IE is shitty and doesn't support $FEATURE
+    const isIE = detectIE();
+
+    // Good
+    // $FEATURE is not supported on IE
+    const isIE = detectIE();
+    ```
+
 ## Strings
 
   * Use `String()` to coerce values into strings.
