@@ -110,6 +110,61 @@
     }
     ```
 
+## Variables
+
+  * Declare each variable separately and on their own lines. The exception is undefined variables, which may be declared in the same statement.
+
+    ```js
+    // Bad
+    var foo, bar = 123,
+        baz = true, qux;
+
+    // Good
+    var bar = 123;
+    var baz = true;
+    var foo, qux;
+    ```
+
+  * Prefer `let` and `const` over `var` where possible.
+
+    ```js
+    // Bad
+    var ITERATIONS = 100;
+    var current = 0;
+    var remaining = ITERATIONS - current;
+
+    // Good
+    const iterations = 100;
+    let current = 0;
+    let remaining = iterations - current;
+    ```
+
+  * Give variables clear names.
+
+    ```js
+    // Bad
+    const c = 100;
+    const s = String(c);
+    const l = s.length;
+
+    // Good
+    const count = 100;
+    const countString = String(count);
+    const length = countString.length;
+    ```
+
+    **Note**: Single letter variable names are not forbidden. Notable examples are `i` (and to a lesser extent, `j`) in `for` loops, as well as common variable names like `x` and `y` (as long as their meaning is clear in context).
+
+    ```js
+    // Fine
+    let x, y;
+    for (let i = 0; i < arr.length; i++) {
+        x = arr[i][0];
+        y = arr[i][1];
+        console.log('Data point at (%i, %i)', x, y);
+    }
+    ```
+
 ## Comments
 
   * Try and use sentence case in comments.
