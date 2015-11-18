@@ -139,6 +139,8 @@
     let remaining = iterations - current;
     ```
 
+## Naming
+
   * Give variables clear names.
 
     ```js
