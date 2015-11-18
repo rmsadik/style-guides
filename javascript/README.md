@@ -216,6 +216,17 @@
     class ApplicationView extends View {}
     ```
 
+  * Use UPPER_CASE for global constants.
+
+    ```js
+    const API_ORIGIN = 'http://example.com';
+
+    function fetchProfile (userID) {
+        const endpoint = `${API_ORIGIN}/user/${userID}`;
+        return $.ajax(endpoint);
+    }
+    ```
+
 
 ## Comments
 
