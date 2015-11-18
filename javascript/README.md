@@ -18,7 +18,8 @@
 
 ## 1. Whitespace
 
-  * Use tabs, not spaces.
+  * <a name="1.1" href="#1.1">1.1</a>.
+    Use tabs, not spaces.
 
     ```js
     function bad () {
@@ -32,7 +33,8 @@
 
     **Note**: Enable invisible characters in your text editor or IDE to avoid introducing mixed indentation.
 
-  * Avoid introducing whitespace at the end of a line.
+  * <a name="1.2" href="#1.2">1.2</a>.
+    Avoid introducing whitespace at the end of a line.
 
     ```js
     // Bad
@@ -44,7 +46,8 @@
 
     **Note**: Enabling invisible characters will help here, too. Your text editor or IDE may also be able to remove whitespace at the end of lines automatically.
 
-  * Use spaces between operators.
+  * <a name="1.3" href="#1.3">1.3</a>.
+    Use spaces between operators.
 
     ```js
     // Bad
@@ -54,7 +57,8 @@
     const roomy = Math.PI * r * r;
     ```
 
-  * Prefix, postfix and unary operators do not need to be spaced.
+  * <a name="1.4" href="#1.4">1.4</a>.
+    Prefix, postfix and unary operators do not need to be spaced.
 
     ```js
     // Bad
@@ -68,7 +72,8 @@
     console.log(--z);
     ```
 
-  * Do not add spaces inside parentheses.
+  * <a name="1.5" href="#1.5">1.5</a>.
+    Do not add spaces inside parentheses.
 
     ```js
     // Bad
@@ -78,7 +83,8 @@
     console.log('Hello world');
     ```
 
-  * Do not add spaces inside square brackets.
+  * <a name="1.6" href="#1.6">1.6</a>.
+    Do not add spaces inside square brackets.
 
     ```js
     // Bad
@@ -88,7 +94,8 @@
     ['Bar'];
     ```
 
-  * Add spaces inside braces and after colons.
+  * <a name="1.7" href="#1.7">1.7</a>.
+    Add spaces inside braces and after colons.
 
     ```js
     // Bad
@@ -98,7 +105,8 @@
     { foo: 'bar' }
     ```
 
-  * Add spaces after commas.
+  * <a name="1.8" href="#1.8">1.8</a>.
+    Add spaces after commas.
 
     ```js
     // Bad
@@ -108,7 +116,8 @@
     fn([1, 2, 3], 'a', 'b', 'c');
     ```
 
-  * Use spaces around keywords, argument lists and conditions.
+  * <a name="1.9" href="#1.9">1.9</a>.
+    Use spaces around keywords, argument lists and conditions.
 
     ```js
     // Bad
@@ -128,7 +137,8 @@
 
 ## 2. Variables
 
-  * Declare each variable separately and on their own lines. The exception is undefined variables, which may be declared in the same statement.
+  * <a name="2.1" href="#2.1">2.1</a>.
+    Declare each variable separately and on their own lines. The exception is undefined variables, which may be declared in the same statement.
 
     ```js
     // Bad
@@ -141,7 +151,8 @@
     var foo, qux;
     ```
 
-  * Prefer `let` and `const` over `var` where possible.
+  * <a name="2.2" href="#2.2">2.2</a>.
+    Prefer `let` and `const` over `var` where possible.
 
     ```js
     // Bad
@@ -155,7 +166,8 @@
     let remaining = iterations - current;
     ```
 
-  * Avoid saving references to `this`. These can almost always be replaced with an arrow function.
+  * <a name="2.3" href="#2.3">2.3</a>.
+    Avoid saving references to `this`. These can almost always be replaced with an arrow function.
 
     ```js
     // Bad
@@ -180,7 +192,8 @@
 
 ## 3. Naming
 
-  * Give variables clear names.
+  * <a name="3.1" href="#3.1">3.1</a>.
+    Give variables clear names.
 
     ```js
     // Bad
@@ -206,7 +219,8 @@
     }
     ```
 
-  * Use camelCase for variable names.
+  * <a name="3.2" href="#3.2">3.2</a>.
+    Use camelCase for variable names.
 
     ```js
     // Bad
@@ -220,7 +234,8 @@
     const inputValue = 'foobar';
     ```
 
-  * Use PascalCase for constructors and class names.
+  * <a name="3.3" href="#3.3">3.3</a>.
+    Use PascalCase for constructors and class names.
 
     ```js
     // Bad
@@ -232,7 +247,8 @@
     class ApplicationView extends View {}
     ```
 
-  * Use UPPER_CASE for global constants.
+  * <a name="3.4" href="#3.4">3.4</a>.
+    Use UPPER_CASE for global constants.
 
     ```js
     const API_ORIGIN = 'http://example.com';
@@ -243,7 +259,8 @@
     }
     ```
 
-  * Keep variable names professional.
+  * <a name="3.5" href="#3.5">3.5</a>.
+    Keep variable names professional.
 
     ```js
     // Bad
@@ -259,7 +276,8 @@
 
 ## 4. Comments
 
-  * Try and use sentence case in comments.
+  * <a name="4.1" href="#4.1">4.1</a>.
+    Try and use sentence case in comments.
 
     ```js
     // bad: it can be difficult to tell if two line comments are a
@@ -271,7 +289,8 @@
     const bar = 'bar';
     ```
 
-  * Keep comments professional.
+  * <a name="4.2" href="#4.2">4.2</a>.
+    Keep comments professional.
 
     ```js
     // Bad
@@ -283,7 +302,8 @@
     const isIE = detectIE();
     ```
 
-  * Use doc blocks. They should allow the reader to understand the purpose and behavior of a chunk of code (like a function, class, property etc.) before they have actually read the code. Doc blocks are multiline comments beginning with `/**` (two asterisks).
+  * <a name="4.3" href="#4.3">4.3</a>.
+    Use doc blocks. They should allow the reader to understand the purpose and behavior of a chunk of code (like a function, class, property etc.) before they have actually read the code. Doc blocks are multiline comments beginning with `/**` (two asterisks).
 
     ```js
     // Bad
@@ -322,7 +342,8 @@
 
 ## 5. Types
 
-  * Use `typeof` to check the type of primitives.
+  * <a name="5.1" href="#5.1">5.1</a>.
+    Use `typeof` to check the type of primitives.
 
     ```js
     const value = 'hello world';
@@ -334,7 +355,8 @@
     typeof value === 'string'; // => true
     ```
 
-  * Use `instanceof` to check the type of objects.
+  * <a name="5.2" href="#5.2">5.2</a>.
+    Use `instanceof` to check the type of objects.
 
     ```js
     class Base {}
@@ -354,7 +376,8 @@
 
 ## 6. Strings
 
-  * Use `String()` to coerce values into strings.
+  * <a name="6.1" href="#6.1">6.1</a>.
+    Use `String()` to coerce values into strings.
 
     ```js
     const maybeString = 123;
@@ -366,7 +389,8 @@
     const prefer = String(maybeString);
     ```
 
-  * Avoid using `#toString()` if possible.
+  * <a name="6.2" href="#6.2">6.2</a>.
+    Avoid using `#toString()` if possible.
 
     ```js
     const input = null;
@@ -390,7 +414,8 @@
     String(new Example()); // => 'Hello world'
     ```
 
-  * Do not use the `new` keyword when initializing a string.
+  * <a name="6.3" href="#6.3">6.3</a>.
+    Do not use the `new` keyword when initializing a string.
 
     ```js
     const response = 123;
@@ -405,7 +430,8 @@
     typeof result; // => 'string'
     ```
 
-  * Use single quotes for strings. Escape single quotes inside the string with a backslash.
+  * <a name="6.4" href="#6.4">6.4</a>.
+    Use single quotes for strings. Escape single quotes inside the string with a backslash.
 
     ```js
     // Bad
@@ -415,7 +441,8 @@
     const prefer = 'My name\'s Superman';
     ```
 
-  * Try and use template strings to concatenate values.
+  * <a name="6.5" href="#6.5">6.5</a>.
+    Try and use template strings to concatenate values.
 
     ```js
     const foo = 'foo';
@@ -434,7 +461,8 @@
 
     ['Template strings' on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings).
 
-  * Use only references in template strings. Avoid using complex statements.
+  * <a name="6.6" href="#6.6">6.6</a>.
+    Use only references in template strings. Avoid using complex statements.
 
     ```js
     // Bad
@@ -448,7 +476,8 @@
     const result = 'HELLO ${this.name}';
     ```
 
-  * Avoid using template strings where not necessary.
+  * <a name="6.7" href="#6.7">6.7</a>.
+    Avoid using template strings where not necessary.
 
     ```js
     // Unnecessary
@@ -460,7 +489,8 @@
 
 ## 7. Numbers
 
-  * Use `Number()` to coerce values into numbers where possible. This pattern is preferred for numeric values generated by other systems (e.g. via APIs).
+  * <a name="7.1" href="#7.1">7.1</a>.
+    Use `Number()` to coerce values into numbers where possible. This pattern is preferred for numeric values generated by other systems (e.g. via APIs).
 
     ```js
     const response = '123';
@@ -482,7 +512,8 @@
     result = Number(response);
     ```
 
-  * Do not use the `new` keyword when initializing a number.
+  * <a name="7.2" href="#7.2">7.2</a>.
+    Do not use the `new` keyword when initializing a number.
 
     ```js
     const response = '123';
@@ -497,7 +528,8 @@
     typeof result; // => 'number'
     ```
 
-  * Use `Number()` if you _expect_ a value to be a number.
+  * <a name="7.3" href="#7.3">7.3</a>.
+    Use `Number()` if you _expect_ a value to be a number.
 
     ```js
     const input = '100x';
@@ -509,7 +541,8 @@
     Number(input); // => NaN
     ```
 
-  * Try and use `parseInt()` to coerce user input to numbers. Always use a radix to specify the base you expect the number to be in.
+  * <a name="7.4" href="#7.4">7.4</a>.
+    Try and use `parseInt()` to coerce user input to numbers. Always use a radix to specify the base you expect the number to be in.
 
     ```js
     const input = '0x10';
@@ -528,7 +561,8 @@
     result = parseInt(input, 16); // => 16
     ```
 
-  * Use `parseFloat()` only for floating point input in base 10.
+  * <a name="7.5" href="#7.5">7.5</a>.
+    Use `parseFloat()` only for floating point input in base 10.
 
     ```js
     const input = '3.14159';
@@ -547,7 +581,8 @@
     result = parseFloat(input); // => 3.14159
     ```
 
-  * Declare numbers in their original base if appropriate.
+  * <a name="7.6" href="#7.6">7.6</a>.
+    Declare numbers in their original base if appropriate.
 
     ```js
     // Bad
@@ -563,7 +598,8 @@
     const bin = 0b10000; // Introduced in ES6
     ```
 
-  * Do not use the leading-zero pattern of declaring octal numbers. It is unclear and inconsistent with binary and hexadecimal numbers.
+  * <a name="7.8" href="#7.8">7.8</a>.
+    Do not use the leading-zero pattern of declaring octal numbers. It is unclear and inconsistent with binary and hexadecimal numbers.
 
     ```js
     // Bad
@@ -573,7 +609,8 @@
     const clear = 0o10; // => 8
     ```
 
-  * Avoid using bitshift operators where possible. Bitshift operators return 32 bit integers instead of an eight byte IEEE 754 floating point number. They will only return whole number values between -2,147,483,648 and 2,147,483,647.
+  * <a name="7.9" href="#7.9">7.9</a>.
+    Avoid using bitshift operators where possible. Bitshift operators return 32 bit integers instead of an eight byte IEEE 754 floating point number. They will only return whole number values between -2,147,483,648 and 2,147,483,647.
 
     ```js
     2147483647 >> 0; // => 2147483647
@@ -597,7 +634,8 @@
 
 ## 8. Booleans
 
-  * Use `Boolean()` to coerce values into booleans. Try and return actual boolean values from any method that declares its return type as boolean.
+  * <a name="8.1" href="#8.1">8.1</a>.
+    Use `Boolean()` to coerce values into booleans. Try and return actual boolean values from any method that declares its return type as boolean.
 
     ```js
     /**
@@ -625,7 +663,8 @@
     }
     ```
 
-  * Do not use the `new` keyword when initializing a boolean.
+  * <a name="8.2" href="#8.2">8.2</a>.
+    Do not use the `new` keyword when initializing a boolean.
 
     ```js
     const falsy = 0;
@@ -645,7 +684,8 @@
 
 ## 9. Equality operators
 
-  * Always use strict equality operators.
+  * <a name="9.1" href="#9.1">9.1</a>.
+    Always use strict equality operators.
 
     ```js
     // Bad
@@ -661,7 +701,8 @@
     '1' !== 1; // => true
     ```
 
-  * Coerce values before comparing them where appropriate.
+  * <a name="9.2" href="#9.2">9.2</a>.
+    Coerce values before comparing them where appropriate.
 
     ```js
     const x = '1';
@@ -673,7 +714,8 @@
     Number(x) === 1; // => true
     ```
 
-  * Be careful when comparing two floating point numbers.
+  * <a name="9.3" href="#9.3">9.3</a>.
+    Be careful when comparing two floating point numbers.
 
     ```js
     const a = 0.1;
@@ -691,7 +733,8 @@
 
     [`Number.EPSILON` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON). Introduced in ES6.
 
-  * Use `isNaN` to compare with `NaN`
+  * <a name="9.4" href="#9.4">9.4</a>.
+    Use `isNaN` to compare with `NaN`
 
     ```js
     const val = 0 / 0; // => NaN
@@ -705,7 +748,8 @@
 
     [`isNaN()` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN).
 
-  * Keep in mind that comparing object references will not compare their state or value.
+  * <a name="9.5" href="#9.5">9.5</a>.
+    Keep in mind that comparing object references will not compare their state or value.
 
     ```js
     [] === []; // => false
@@ -722,7 +766,8 @@
 
 ## 10. Inequality operators
 
-  * Be careful when comparing with a value that may be `null`.
+  * <a name="10.1" href="#10.1">10.1</a>.
+    Be careful when comparing with a value that may be `null`.
 
     ```js
     const a = 5;
@@ -732,7 +777,8 @@
     b >= 0; // => true
     ```
 
-  * Keep in mind that comparing object references will compare the objects' values.
+  * <a name="10.2" href="#10.2">10.2</a>.
+    Keep in mind that comparing object references will compare the objects' values.
 
     ```js
     class Example {
@@ -754,7 +800,8 @@
     bar >= baz && bar <= baz; // => true
     ```
 
-  * Note that comparing strings may result in numeric coercion.
+  * <a name="10.3" href="#10.3">10.3</a>.
+    Note that comparing strings may result in numeric coercion.
 
     ```js
     '3' > 4; // => false
@@ -763,7 +810,8 @@
 
 ## 11. Functions
 
-  * Use function declarations over function expressions where possible.
+  * <a name="11.1" href="#11.1">11.1</a>.
+    Use function declarations over function expressions where possible.
 
     ```js
     // Bad
@@ -775,7 +823,8 @@
 
     **Note**: Function declarations are not statements and as such are not followed by a semicolon.
 
-  * Avoid re-declaring functions.
+  * <a name="11.2" href="#11.2">11.2</a>.
+    Avoid re-declaring functions.
 
     ```js
     // Bad, unnecessary re-declaration
@@ -795,9 +844,11 @@
     }
     ```
 
-  * Document functions where possible. Generally, named functions should all have proper documentation blocks. At the very least, each block should document the expected inputs and outputs (both their purpose and data type). Ideally, a documentation block gives the reader a good idea of what the function will do and how to use it -- without reading any of its code.
+  * <a name="11.3" href="#11.3">11.3</a>.
+    Document functions where possible. Generally, named functions should all have proper documentation blocks. At the very least, each block should document the expected inputs and outputs (both their purpose and data type). Ideally, a documentation block gives the reader a good idea of what the function will do and how to use it -- without reading any of its code.
 
-  * Give functions descriptive, [imperative](https://en.wikipedia.org/wiki/Imperative_mood) names.
+  * <a name="11.4" href="#11.4">11.4</a>.
+    Give functions descriptive, [imperative](https://en.wikipedia.org/wiki/Imperative_mood) names.
 
     ```js
     // Bad, name not descriptive
@@ -821,7 +872,8 @@
     }
     ```
 
-  * Avoid declaring methods which do not depend on `this`. A method is a function declared as a member of an object. If a method does not use `this`, it can probably be defined as a function instead.
+  * <a name="11.5" href="#11.5">11.5</a>.
+    Avoid declaring methods which do not depend on `this`. A method is a function declared as a member of an object. If a method does not use `this`, it can probably be defined as a function instead.
 
     ```js
     class Example {
@@ -854,7 +906,8 @@
 
 ## 12. Arrow functions
 
-  * Prefer arrow functions over function declarations where possible. Arrow functions are cleaner and do not introduce their own scope.
+  * <a name="12.1" href="#12.1">12.1</a>.
+    Prefer arrow functions over function declarations where possible. Arrow functions are cleaner and do not introduce their own scope.
 
     ```js
     const input = [1, 2, 3];
@@ -874,7 +927,8 @@
     squared = input.map((num) => num * num);
     ```
 
-  * Use parentheses around arguments list even when there is a single argument.
+  * <a name="12.2" href="#12.2">12.2</a>.
+    Use parentheses around arguments list even when there is a single argument.
 
     ```js
     const input = [1, 2, 3];
@@ -888,7 +942,8 @@
 
 ## 13. Method chaining
 
-  * Split method chains with newlines. This makes functionality clearer, diffs simpler, and [blames](https://git-scm.com/docs/git-blame) easier.
+  * <a name="13.1" href="#13.1">13.1</a>.
+    Split method chains with newlines. This makes functionality clearer, diffs simpler, and [blames](https://git-scm.com/docs/git-blame) easier.
 
     ```js
     // Bad
@@ -901,7 +956,8 @@
         .text((i) => `Item ${i + 1}`);
     ```
 
-  * Use a leading dot when chaining. Indent chained methods.
+  * <a name="13.2" href="#13.2">13.2</a>.
+    Use a leading dot when chaining. Indent chained methods.
 
     ```js
     // Bad
@@ -921,7 +977,8 @@
         .catch((err) => displayError(err));
     ```
 
-  * Limit chain length where possible. It may be clearer to assign intermediary results to a variable.
+  * <a name="13.3" href="#13.3">13.3</a>.
+    Limit chain length where possible. It may be clearer to assign intermediary results to a variable.
 
     ```js
     // Bad
