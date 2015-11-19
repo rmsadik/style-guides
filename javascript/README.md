@@ -159,16 +159,18 @@
     Prefer `let` and `const` over `var` where possible.
 
     ```js
-    // Bad
+    // OK
     var ITERATIONS = 100;
     var current = 0;
     var remaining = ITERATIONS - current;
 
-    // Good
+    // Better
     const iterations = 100;
     let current = 0;
     let remaining = iterations - current;
     ```
+
+    [`let` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let). [`const` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const). [`var` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var).
 
   * <a name="2.3" href="#2.3">2.3</a>.
     Avoid saving references to `this`. These can almost always be replaced with an arrow function.
