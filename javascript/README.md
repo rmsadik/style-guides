@@ -877,6 +877,87 @@
     const obj = {};
     ```
 
+  * <a name="12.2" href="#12.2">12.2</a>.
+    Use dot notation when accessing properties where possible.
+
+    ```js
+    const foo = { bar: 'baz' };
+
+    // Bad
+    console.log(foo['bar']);
+
+    // Good
+    console.log(foo.bar);
+    ```
+
+  * <a name="12.3" href="#12.3">12.3</a>.
+    Avoid using complex property names.
+
+    ```js
+    // Bad
+    const attrs = {
+        'data-foo': 'foo',
+        'data-bar': 'bar',
+    };
+
+    // Good
+    const attrs = {
+        dataFoo: 'foo',
+        dataBar: 'bar',
+    };
+    ```
+
+  * <a name="12.4" href="#12.4">12.4</a>.
+    Avoid using reserved words as property names.
+
+    ```js
+    // Bad
+    const attrs = {
+        default: getDefaultValues(),
+        switch: 'test-flag',
+        export: 'main',
+    };
+
+    // Good
+    const attrs = {
+        defaults: getDefaultValues(),
+        switches: 'test-flag',
+        exports: 'main',
+    };
+    ```
+
+  * <a name="12.5" href="#12.5">12.5</a>.
+    Use computed property names where possible. Like [6.6](#6.6), avoid using complex statements in a computed property name.
+
+    ```js
+    // Bad
+    function bad () {
+        const key = getKeyName();
+        const result = {
+            foo: 'bar',
+        };
+        result[key] = getValue();
+        return result;
+    }
+
+    // Bad
+    function good () {
+        return {
+            foo: 'bar',
+            [getKeyName()]: getValue(),
+        };
+    }
+
+    // Good
+    function good () {
+        const key = getKeyName();
+        return {
+            foo: 'bar',
+            [key]: getValue(),
+        };
+    }
+    ```
+
 ## 13. Commas
 
   * <a name="13.1" href="#13.1">13.1</a>.
