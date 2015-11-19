@@ -1113,6 +1113,50 @@
 
     Notable exceptions are abstract and virtual methods. These may be intentionally stubbed if anticipating child classes to implement those methods.
 
+  * <a name="15.6" href="#15.6">15.6</a>.
+    Treat object references as immutable unless your function is a mutator.
+
+    ```js
+    const numbers = [3, 1, 4, 1, 5, 9];
+
+    // Bad, mutates input
+    function largest (arr) {
+        return arr.sort((a, b) => a - b).pop();
+    }
+    console.log('Largest: %i', largest(numbers)); // => 9
+    console.log('Numbers: %o', numbers); // => [1, 1, 3, 4, 5]
+
+    // Good, accesses input
+    function largest (arr) {
+        return [...arr].sort((a, b) => a - b).pop();
+    }
+    console.log('Largest: %i', largest(numbers)); // => 9
+    console.log('Numbers: %o', numbers); // => [3, 1, 4, 1, 5, 9]
+    ```
+
+    ```js
+    const DEFAULT_ENDPOINT = '/api';
+    const options = { data: 'foobar' };
+
+    // Bad, mutates input
+    function fetchData (options) {
+        options.url = options.url || DEFAULT_ENDPOINT;
+        return $.ajax(options);
+    }
+    fetchData(options);
+    console.log(options); // => { data: 'foobar', url: '/api' }
+
+    // Good, accesses input
+    function fetchData (options) {
+        options = Object.assign({
+            url: DEFAULT_ENDPOINT,
+        }, options);
+        return $.ajax(options);
+    }
+    fetchData(options);
+    console.log(options); // => { data: 'foobar' }
+    ```
+
 ## 16. Arrow functions
 
   * <a name="16.1" href="#16.1">16.1</a>.
