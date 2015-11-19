@@ -818,6 +818,48 @@
 
 ## 13. Commas
 
+  * <a name="13.1" href="#13.1">13.1</a>.
+    Use trailing commas when list items are on their own lines.
+
+    ```js
+    // Bad
+    const arr = [
+        'foo',
+        'bar',
+        'baz'
+    ];
+    const obj = {
+        foo: 'foo',
+        bar: 'bar',
+        baz: 'baz'
+    };
+
+    // Good
+    const arr = [
+        'foo',
+        'bar',
+        'baz',
+    ];
+    const obj = {
+        foo: 'foo',
+        bar: 'bar',
+        baz: 'baz',
+    };
+    ```
+
+  * <a name="13.2" href="#13.2">13.2</a>.
+    Do not use trailing commas when list items are on the same line.
+
+    ```js
+    // Bad
+    const args = ['foo', 'bar', 'baz',];
+    const options = { foo: 'foo', bar: 'bar', baz: 'baz', };
+
+    // Good
+    const args = ['foo', 'bar', 'baz',];
+    const options = { foo: 'foo', bar: 'bar', baz: 'baz', };
+    ```
+
 ## 14. Semicolons
 
 ## 15. Functions
