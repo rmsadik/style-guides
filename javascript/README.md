@@ -1054,7 +1054,7 @@
     ```
 
   * <a name="15.3" href="#15.3">15.3</a>.
-    Document functions where possible. Generally, named functions should all have proper documentation blocks. At the very least, each block should document the expected inputs and outputs (both their purpose and data type). Ideally, a documentation block gives the reader a good idea of what the function will do and how to use it -- without reading any of its code.
+    Document functions where possible. Generally, named functions should all have proper documentation blocks. See [4.3](#4.3).
 
   * <a name="15.4" href="#15.4">15.4</a>.
     Give functions descriptive, [imperative](https://en.wikipedia.org/wiki/Imperative_mood) names.
