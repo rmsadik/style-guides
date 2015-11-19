@@ -814,7 +814,29 @@
 
 ## 11. Arrays
 
+  * <a name="11.1" href="#11.1">11.1</a>.
+    Use the array literal syntax to create arrays.
+
+    ```js
+    // Bad
+    const arr = new Array();
+
+    // Good
+    const arr = [];
+    ```
+
 ## 12. Objects
+
+  * <a name="12.1" href="#12.1">12.1</a>.
+    Use the object literal syntax to create objects.
+
+    ```js
+    // Bad
+    const obj = new Object();
+
+    // Good
+    const obj = {};
+    ```
 
 ## 13. Commas
 
@@ -861,6 +883,19 @@
     ```
 
 ## 14. Semicolons
+
+  * <a name="13.2" href="#13.2">13.2</a>.
+    Use semicolons. Do not rely on ASI.
+
+    ```js
+    // Bad
+    const foo
+    const bar = baz()
+
+    // Good
+    const foo;
+    const bar = baz();
+    ```
 
 ## 15. Functions
 
