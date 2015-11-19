@@ -961,7 +961,7 @@
 ## 13. Commas
 
   * <a name="13.1" href="#13.1">13.1</a>.
-    Use trailing commas when list items are on their own lines.
+    Use trailing commas when list items are on their own lines. [See this gist](https://gist.github.com/j-/2c12c64b48d703aa9112) for an example of why trailing commas are a good thing.
 
     ```js
     // Bad
