@@ -825,6 +825,45 @@
     const arr = [];
     ```
 
+  * <a name="11.2" href="#11.2">11.2</a>.
+    Use the rest and spread operators where possible.
+
+    ```js
+    const items = document.querySelectorAll('.foo');
+
+    // Bad
+    Array.prototype.map.call(items, (item) => item.textContent);
+
+    // Good
+    [...items].map((item) => item.textContent);
+    ```
+
+  * <a name="11.3" href="#11.3">11.3</a>.
+    Be careful when using `Array#sort()`. Note that if a comparator function is not supplied, the default algorithm uses a _case-sensitive string sort_.
+
+    ```js
+    // Bad
+    ['a', 'b', 'C'].sort(); // => ['C', 'a', 'b']
+    [5, 10, 15, 20].sort(); // => [10, 15, 20, 5]
+
+    // Good
+    function strCompCI (a, b) {
+        a = String(a).toUpperCase();
+        b = String(b).toUpperCase();
+        if (a < b) {
+            return -1;
+        }
+        if (a > b) {
+            return 1;
+        }
+        return 0;
+    }
+    ['a', 'b', 'C'].sort(strCompCI); // => ['a', 'b', 'C'];
+    [5, 10, 15, 20].sort((a, b) => a - b); // => [5, 10, 15, 20];
+    ```
+
+    [`Array.prototype.sort()` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
+
 ## 12. Objects
 
   * <a name="12.1" href="#12.1">12.1</a>.
