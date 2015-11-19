@@ -12,9 +12,13 @@
 8.  [Booleans](#8-booleans)
 9.  [Equality operators](#9-equality-operators)
 10. [Inequality operators](#10-inequality-operators)
-11. [Functions](#11-functions)
-12. [Arrow functions](#12-arrow-functions)
-13. [Method chaining](#13-method-chaining)
+11. [Arrays](#11-arrays)
+12. [Objects](#12-objects)
+13. [Commas](#13-commas)
+14. [Semicolons](#14-semicolons)
+15. [Functions](#15-functions)
+16. [Arrow functions](#16-arrow-functions)
+17. [Method chaining](#17-method-chaining)
 
 ## 1. Whitespace
 
@@ -808,9 +812,17 @@
     '4' > 3; // => true
     ```
 
-## 11. Functions
+## 11. Arrays
 
-  * <a name="11.1" href="#11.1">11.1</a>.
+## 12. Objects
+
+## 13. Commas
+
+## 14. Semicolons
+
+## 15. Functions
+
+  * <a name="15.1" href="#15.1">15.1</a>.
     Use function declarations over function expressions where possible.
 
     ```js
@@ -823,7 +835,7 @@
 
     **Note**: Function declarations are not statements and as such are not followed by a semicolon.
 
-  * <a name="11.2" href="#11.2">11.2</a>.
+  * <a name="15.2" href="#15.2">15.2</a>.
     Avoid re-declaring functions.
 
     ```js
@@ -844,10 +856,10 @@
     }
     ```
 
-  * <a name="11.3" href="#11.3">11.3</a>.
+  * <a name="15.3" href="#15.3">15.3</a>.
     Document functions where possible. Generally, named functions should all have proper documentation blocks. At the very least, each block should document the expected inputs and outputs (both their purpose and data type). Ideally, a documentation block gives the reader a good idea of what the function will do and how to use it -- without reading any of its code.
 
-  * <a name="11.4" href="#11.4">11.4</a>.
+  * <a name="15.4" href="#15.4">15.4</a>.
     Give functions descriptive, [imperative](https://en.wikipedia.org/wiki/Imperative_mood) names.
 
     ```js
@@ -872,7 +884,7 @@
     }
     ```
 
-  * <a name="11.5" href="#11.5">11.5</a>.
+  * <a name="15.5" href="#15.5">15.5</a>.
     Avoid declaring methods which do not depend on `this`. A method is a function declared as a member of an object. If a method does not use `this`, it can probably be defined as a function instead.
 
     ```js
@@ -904,9 +916,9 @@
 
     Notable exceptions are abstract and virtual methods. These may be intentionally stubbed if anticipating child classes to implement those methods.
 
-## 12. Arrow functions
+## 16. Arrow functions
 
-  * <a name="12.1" href="#12.1">12.1</a>.
+  * <a name="16.1" href="#16.1">16.1</a>.
     Prefer arrow functions over function declarations where possible. Arrow functions are cleaner and do not introduce their own scope.
 
     ```js
@@ -927,7 +939,7 @@
     squared = input.map((num) => num * num);
     ```
 
-  * <a name="12.2" href="#12.2">12.2</a>.
+  * <a name="16.2" href="#16.2">16.2</a>.
     Use parentheses around arguments list even when there is a single argument.
 
     ```js
@@ -940,9 +952,9 @@
     input.forEach((x) => console.log(x));
     ```
 
-## 13. Method chaining
+## 17. Method chaining
 
-  * <a name="13.1" href="#13.1">13.1</a>.
+  * <a name="17.1" href="#17.1">17.1</a>.
     Split method chains with newlines. This makes functionality clearer, diffs simpler, and [blames](https://git-scm.com/docs/git-blame) easier.
 
     ```js
@@ -956,7 +968,7 @@
         .text((i) => `Item ${i + 1}`);
     ```
 
-  * <a name="13.2" href="#13.2">13.2</a>.
+  * <a name="17.2" href="#17.2">17.2</a>.
     Use a leading dot when chaining. Indent chained methods.
 
     ```js
@@ -977,7 +989,7 @@
         .catch((err) => displayError(err));
     ```
 
-  * <a name="13.3" href="#13.3">13.3</a>.
+  * <a name="17.3" href="#17.3">17.3</a>.
     Limit chain length where possible. It may be clearer to assign intermediary results to a variable.
 
     ```js
