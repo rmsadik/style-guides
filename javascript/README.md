@@ -21,6 +21,10 @@
 17. [Method chaining](#17-method-chaining)
 18. [Blocks](#18-blocks)
 19. [If statement](#19-if-statement)
+20. [For loops](#20-for-loops)
+21. [While loops](#21-while-loops)
+22. [Switch statement](#22-switch-statement)
+23. [With statement](#23-with-statement)
 
 ## 1. Whitespace
 
@@ -700,6 +704,12 @@
         // Bad
         result = !!(x && y); // and(1, 2) => true
 
+        // Worse
+        result = x && y ? true : false;
+
+        // Terrible
+        result = x && y === true ? true : false;
+
         // Good
         result = Boolean(x && y); // and(1, 2) => true
 
@@ -1377,3 +1387,62 @@
         valueEntered = false;
     }
     ```
+
+  * <a name="19.3" href="#19.3">19.3</a>.
+    Do not use an `if` statement where a ternary statement would suffice.
+
+    ```js
+    // Bad
+    function getFoo () {
+        if (foo) {
+            return 'foo';
+        }
+        else {
+            return 'bar';
+        }
+    }
+
+    // Good
+    function getFoo () {
+        return foo ? 'foo' : 'bar';
+    }
+    ```
+
+  * <a name="19.4" href="#19.4">19.4</a>.
+    Do not use an `if` statement where a boolean would suffice.
+
+    ```js
+    // Bad
+    function getFoo () {
+        if (foo) {
+            return true;
+        }
+        return false;
+    }
+
+    // Bad
+    function getFoo () {
+        if (foo) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    // Good
+    function getFoo () {
+        return foo;
+    }
+    ```
+
+## 20. For loops
+
+## 21. While loops
+
+## 22. Switch statement
+
+## 23. With statement
+
+  * <a name="23.1" href="#23.1">23.1</a>.
+    No.
