@@ -19,6 +19,8 @@
 15. [Functions](#15-functions)
 16. [Arrow functions](#16-arrow-functions)
 17. [Method chaining](#17-method-chaining)
+18. [Blocks](#18-blocks)
+19. [If statement](#19-if-statement)
 
 ## 1. Whitespace
 
@@ -1305,4 +1307,73 @@
     const $open = $items.find('.open');
     $selected.highlight();
     $open.updateCount();
+    ```
+
+## 18. Blocks
+
+  * <a name="18.1" href="#18.1">18.1</a>.
+    Always use braces around blocks.
+
+    ```js
+    // Bad
+    if (condition) action();
+
+    // Worse
+    if (condition)
+        action();
+
+    // Terrible
+    if (condition)
+        for (let key in obj)
+            if (Object.hasOwnProperty.call(obj, key)) {
+                console.log(key, obj[key]);
+                delete obj[key];
+            }
+
+    // Good
+    if (condition) {
+        action();
+    }
+    ```
+
+## 19. If statement
+
+  * <a name="19.1" href="#19.1">19.1</a>.
+    Assign complicated conditions to an intermediate variable.
+
+    ```js
+    // Bad
+    if (foo === 'bar' && baz > qux) {
+        console.log('mystery condition passed');
+    }
+
+    // Good
+    const condition = foo === 'bar' && baz > qux;
+    if (condition) {
+        console.log('condition passed');
+    }
+    ```
+
+  * <a name="19.2" href="#19.2">19.2</a>.
+    You may put `else` and `else if` on the same line as a closing brace if you like. I prefer closing braces on their own line -- just because you can add a comment for the whole `else` block that does not reside in the previous `if` block. Really either way is fine.
+
+    ```js
+    // Check if user input is valid
+    if (valueEntered && userInput.length > 0) {
+        saveValue(userInput);
+    // Otherwise reset the value
+    } else {
+        userInput = null;
+        valueEntered = false;
+    }
+
+    // Check if user input is valid
+    if (valueEntered && userInput.length > 0) {
+        saveValue(userInput);
+    }
+    // Otherwise reset the value
+    else {
+        userInput = null;
+        valueEntered = false;
+    }
     ```
