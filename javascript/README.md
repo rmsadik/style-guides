@@ -1339,7 +1339,7 @@
 ## 19. If statement
 
   * <a name="19.1" href="#19.1">19.1</a>.
-    Assign complicated conditions to an intermediate variable.
+    Assign complicated conditions to an intermediate variable (similar idea to [2.4](#2.4)).
 
     ```js
     // Bad
