@@ -196,6 +196,24 @@
     }
     ```
 
+  * <a name="2.4" href="#2.4">2.4</a>.
+    Avoid introducing ["magic numbers"](https://en.wikipedia.org/wiki/Magic_number_\(programming\)#Unnamed_numerical_constants) and assign them to clearly named variables instead.
+
+    ```js
+    // Bad, significance of 52 unclear
+    for (let i = 0; i < 52; i++) {
+        let j = i + Math.floor(Math.random() * (52 - i));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+
+    // Good
+    const deckSize = 52;
+    for (let i = 0; i < deckSize; i++) {
+        let j = i + Math.floor(Math.random() * (deckSize - i));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    ```
+
 ## 3. Naming
 
   * <a name="3.1" href="#3.1">3.1</a>.
