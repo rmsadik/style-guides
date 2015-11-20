@@ -681,7 +681,7 @@
         result = !!(x && y); // and(1, 2) => true
 
         // Good
-        result = Boolean(input); // and(1, 2) => true
+        result = Boolean(x && y); // and(1, 2) => true
 
         return result;
     }
