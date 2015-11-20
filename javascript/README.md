@@ -1177,6 +1177,25 @@
     console.log(options); // => { data: 'foobar' }
     ```
 
+  * <a name="15.7" href="#15.7">15.7</a>.
+    Do not access the `arguments` object directly. Instead use the rest operator.
+
+    ```js
+    // Bad
+    function addNumbers () {
+        return [...arguments].reduce((total, num) => total + num, 0);
+    }
+    addNumbers(1, 2, 3, 4); // => 10
+
+    // Good
+    function addNumbers (...nums) {
+        return nums.reduce((total, num) => total + num, 0);
+    }
+    addNumbers(1, 2, 3, 4); // => 10
+    ```
+
+    ['Rest parameters' on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters).
+
 ## 16. Arrow functions
 
   * <a name="16.1" href="#16.1">16.1</a>.
