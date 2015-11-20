@@ -1018,8 +1018,8 @@
     const options = { foo: 'foo', bar: 'bar', baz: 'baz', };
 
     // Good
-    const args = ['foo', 'bar', 'baz',];
-    const options = { foo: 'foo', bar: 'bar', baz: 'baz', };
+    const args = ['foo', 'bar', 'baz'];
+    const options = { foo: 'foo', bar: 'bar', baz: 'baz' };
     ```
 
 ## 14. Semicolons
