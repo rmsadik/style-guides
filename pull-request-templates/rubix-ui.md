@@ -2,7 +2,7 @@
 ##### submitter
 - [ ] base branch is correct
 - [ ] no jshint error
-- [ ] no `console.log`
+- [ ] no `console.log`, no `debugger`
 - [ ] use `Em` instead of `Ember`
 - [ ] docblocks are added
 - [ ] unit tests are passed
