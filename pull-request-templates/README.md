@@ -5,3 +5,4 @@ To use the latest pull request template, install the [Git Pull Request Templates
     https://raw.githubusercontent.com/luxbet/style-guides/master/pull-request-templates/rubix-ui.md
 
 [extension]: https://chrome.google.com/webstore/detail/git-pull-request-template/dlflgkjacacpmhdpiggkdiaieddfmkia
+[repo]: https://github.com/tcrammond/chrome-pullrequest-templates
