@@ -1,3 +1,6 @@
+#### Description
+description goes here
+
 #### Checklist
 ##### submitter
 - [ ] base branch is correct
@@ -14,6 +17,3 @@
 ##### reviewer
 - [ ] code standards ( [JS style guide] (https://github.com/luxbet/style-guides/tree/master/javascript) )
 - [ ] ship:ship: - ready to merge
-
-#### Description
-description goes here
