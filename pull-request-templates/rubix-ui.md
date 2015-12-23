@@ -5,7 +5,7 @@ description goes here
 ##### submitter
 - [ ] base branch is correct
 - [ ] no jshint error
-- [ ] no `console.log`, no `debugger`
+- [ ] no `console.log`, no `debugger`, no `{{log}}`
 - [ ] use `Em` instead of `Ember`
 - [ ] docblocks are added
 - [ ] unit tests are passed
